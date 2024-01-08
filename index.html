@@ -52,10 +52,27 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
+                        <!--CONTROL-->
+                        <script>
+                            $(document).ready(function () {
+                                var profileImageAnimation = anime({
+                                    targets: "#profile-image",
+                                    translateX: [-200, 0],
+                                    easing: 'easeInOutExpo',
+                                    autoplay: false
+                                });
+                        
+                                // Add a click event listener to start the profile image animation on click
+                                $("#profile-image").on("click", function () {
+                                    profileImageAnimation.play();
+                                });
+                            });
+                        </script>
                         <img src="image/me.jpg" alt="About Me Image" id="profile-image">
                     </div>
                     <div style="padding-left: 3%; padding-right: 15%;" class="col-6">
                         <div id="headers">
+                            <!--STAGGER-->
                             <script>
                                 anime({
                                     targets: '#headers',
@@ -73,6 +90,7 @@
                                 Age:
                                 <b class="helvetica" id="age"
                                     style="text-align: left; font-size: 25px; font-weight: bold; color: whitesmoke;">
+                                    <!--NUMBER-->
                                     <script>
                                         anime({
                                             targets: '#age',
@@ -92,6 +110,7 @@
                         </div>
 
                         <p class="helvetica" id="description" style="text-align: left; font-size: 18px; z-index: -1; color: whitesmoke;">
+                            <!--STAGGER-->
                             <script>
                                 anime({
                                     targets: '#description',
